@@ -44,10 +44,8 @@ class Notify{
         }
     }
 
-    notify(receptors, subject, message){
-        for(let i =0; i< receptors.length; i++){
-            senderModule.send(subject, message, receptors[i])
-        }
+    notify(receptor, subject, message){
+        senderModule.send(subject, message, receptor)
         return 'ok'
     }
 }
